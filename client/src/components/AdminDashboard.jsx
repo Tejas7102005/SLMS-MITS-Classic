@@ -48,33 +48,33 @@ const AdminDashboard = () => {
     // Logout handled by Navbar
 
     return (
-        <div className="min-h-screen bg-secondary">
+        <div className="min-h-screen bg-secondary dark:bg-gray-900 transition-colors duration-200">
             <Navbar role="Admin" />
             <div className="max-w-4xl mx-auto p-8">
 
-                <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-200">
                     <h2 className="text-xl font-semibold mb-4 text-blue-600">Register New Faculty</h2>
                     <form onSubmit={onSubmit} className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-gray-700">Name</label>
-                                <input type="text" name="name" value={name} onChange={onChange} className="w-full px-4 py-2 border rounded-md" required />
+                                <label className="block text-gray-700 dark:text-gray-300">Name</label>
+                                <input type="text" name="name" value={name} onChange={onChange} className="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" required />
                             </div>
                             <div>
-                                <label className="block text-gray-700">Email</label>
-                                <input type="email" name="email" value={email} onChange={onChange} className="w-full px-4 py-2 border rounded-md" required />
+                                <label className="block text-gray-700 dark:text-gray-300">Email</label>
+                                <input type="email" name="email" value={email} onChange={onChange} className="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" required />
                             </div>
                             <div>
-                                <label className="block text-gray-700">Password</label>
-                                <input type="password" name="password" value={password} onChange={onChange} className="w-full px-4 py-2 border rounded-md" required />
+                                <label className="block text-gray-700 dark:text-gray-300">Password</label>
+                                <input type="password" name="password" value={password} onChange={onChange} className="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" required />
                             </div>
                             <div>
-                                <label className="block text-gray-700">Department</label>
-                                <input type="text" name="department" value={department} onChange={onChange} className="w-full px-4 py-2 border rounded-md" required />
+                                <label className="block text-gray-700 dark:text-gray-300">Department</label>
+                                <input type="text" name="department" value={department} onChange={onChange} className="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" required />
                             </div>
                             <div>
-                                <label className="block text-gray-700">Designation</label>
-                                <select name="designation" value={designation} onChange={onChange} className="w-full px-4 py-2 border rounded-md">
+                                <label className="block text-gray-700 dark:text-gray-300">Designation</label>
+                                <select name="designation" value={designation} onChange={onChange} className="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                                     <option value="Coordinator">Coordinator</option>
                                     <option value="HOD">HOD</option>
                                 </select>

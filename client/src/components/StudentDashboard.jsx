@@ -53,58 +53,58 @@ const StudentDashboard = () => {
     // Logout is now handled by Navbar component
 
     return (
-        <div className="min-h-screen bg-secondary">
+        <div className="min-h-screen bg-secondary dark:bg-gray-900 transition-colors duration-200">
             <Navbar role="Student" />
             <div className="max-w-4xl mx-auto p-8">
 
-                <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-                    <h2 className="text-xl font-semibold mb-4">Apply for Leave</h2>
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8 transition-colors duration-200">
+                    <h2 className="text-xl font-semibold mb-4 dark:text-white">Apply for Leave</h2>
                     <form onSubmit={onSubmit} className="space-y-4">
                         <div>
-                            <label className="block text-gray-700">Reason</label>
-                            <textarea name="reason" value={reason} onChange={onChange} className="w-full px-4 py-2 border rounded-md" required />
+                            <label className="block text-gray-700 dark:text-gray-300">Reason</label>
+                            <textarea name="reason" value={reason} onChange={onChange} className="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" required />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-gray-700">Start Date</label>
-                                <input type="date" name="startDate" value={startDate} onChange={onChange} className="w-full px-4 py-2 border rounded-md" required />
+                                <label className="block text-gray-700 dark:text-gray-300">Start Date</label>
+                                <input type="date" name="startDate" value={startDate} onChange={onChange} className="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" required />
                             </div>
                             <div>
-                                <label className="block text-gray-700">End Date</label>
-                                <input type="date" name="endDate" value={endDate} onChange={onChange} className="w-full px-4 py-2 border rounded-md" required />
+                                <label className="block text-gray-700 dark:text-gray-300">End Date</label>
+                                <input type="date" name="endDate" value={endDate} onChange={onChange} className="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" required />
                             </div>
                         </div>
                         <button type="submit" className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700">Apply Leave</button>
                     </form>
                 </div>
 
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                    <h2 className="text-xl font-semibold mb-4">My Leave History</h2>
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-200">
+                    <h2 className="text-xl font-semibold mb-4 dark:text-white">My Leave History</h2>
                     <div className="overflow-x-auto">
                         <table className="min-w-full leading-normal">
                             <thead>
                                 <tr>
-                                    <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Reason</th>
-                                    <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Start Date</th>
-                                    <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">End Date</th>
-                                    <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Status</th>
-                                    <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Comment</th>
+                                    <th className="px-5 py-3 border-b-2 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 text-left text-xs font-semibold text-gray-600 dark:text-gray-200 uppercase tracking-wider">Reason</th>
+                                    <th className="px-5 py-3 border-b-2 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 text-left text-xs font-semibold text-gray-600 dark:text-gray-200 uppercase tracking-wider">Start Date</th>
+                                    <th className="px-5 py-3 border-b-2 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 text-left text-xs font-semibold text-gray-600 dark:text-gray-200 uppercase tracking-wider">End Date</th>
+                                    <th className="px-5 py-3 border-b-2 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 text-left text-xs font-semibold text-gray-600 dark:text-gray-200 uppercase tracking-wider">Status</th>
+                                    <th className="px-5 py-3 border-b-2 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 text-left text-xs font-semibold text-gray-600 dark:text-gray-200 uppercase tracking-wider">Comment</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {leaves.map(leave => (
                                     <tr key={leave._id}>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{leave.reason}</td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{new Date(leave.startDate).toLocaleDateString()}</td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{new Date(leave.endDate).toLocaleDateString()}</td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-gray-300">{leave.reason}</td>
+                                        <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-gray-300">{new Date(leave.startDate).toLocaleDateString()}</td>
+                                        <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-gray-300">{new Date(leave.endDate).toLocaleDateString()}</td>
+                                        <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-gray-300">
                                             <span className={`relative inline-block px-3 py-1 font-semibold leading-tight rounded-full
                                                 ${leave.status === 'Approved' ? 'text-green-800 bg-green-100' :
                                                     leave.status === 'Rejected' ? 'text-red-800 bg-red-100' : 'text-yellow-800 bg-yellow-100'}`}>
                                                 <span className="relative">{leave.status}</span>
                                             </span>
                                         </td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{leave.facultyComment || '-'}</td>
+                                        <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-gray-300">{leave.facultyComment || '-'}</td>
                                     </tr>
                                 ))}
                             </tbody>

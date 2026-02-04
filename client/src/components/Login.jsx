@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+import ThemeToggle from './ThemeToggle';
+
 const Login = () => {
     const [formData, setFormData] = useState({
         email: '',
@@ -34,7 +36,10 @@ const Login = () => {
     };
 
     return (
-        <div className="flex min-h-screen bg-white">
+        <div className="flex min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200 relative">
+            <div className="absolute top-4 right-4 z-50">
+                <ThemeToggle />
+            </div>
             {/* Left Half - Image Cover */}
             <div className="hidden md:flex md:w-1/2 bg-cover bg-center relative" style={{ backgroundImage: "url('/campus.jpg')" }}>
                 <div className="absolute inset-0 bg-primary/80 mix-blend-multiply"></div>
@@ -46,12 +51,12 @@ const Login = () => {
             </div>
 
             {/* Right Half - Login Form */}
-            <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-white">
+            <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-gray-900 transition-colors duration-200">
                 <div className="w-full max-w-md space-y-8">
                     <div className="text-center">
                         <img className="mx-auto h-20 w-auto" src="/mits_logo.png" alt="MITS Logo" />
-                        <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
-                        <p className="mt-2 text-sm text-gray-600">
+                        <h2 className="mt-6 text-3xl font-extrabold text-gray-900 dark:text-white">Sign in to your account</h2>
+                        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                             Please enter your credentials to proceed.
                         </p>
                     </div>
@@ -65,7 +70,7 @@ const Login = () => {
                                     type="text" // Changed from email to text as per original somewhat, but email is better. keeping as derived in state
                                     autoComplete="email"
                                     required
-                                    className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                                    className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-400"
                                     placeholder="Email address"
                                     value={email}
                                     onChange={onChange}
@@ -79,7 +84,7 @@ const Login = () => {
                                     type="password"
                                     autoComplete="current-password"
                                     required
-                                    className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                                    className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-400"
                                     placeholder="Password"
                                     value={password}
                                     onChange={onChange}
