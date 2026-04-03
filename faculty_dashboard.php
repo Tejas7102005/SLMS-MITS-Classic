@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_connect.php';
+include 'includes/db_connect.php';
 include 'includes/session_check.php';
 
 // Check if user is faculty
@@ -84,9 +84,12 @@ $pendingLeaves = $conn->query("
         body { background-color: #f4f7f6; }
         .dashboard-container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         .card { border: none; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-        .card-header { background-color: #198754; color: white; font-weight: 600; border-radius: 10px 10px 0 0 !important; }
+        .card-header { background-color: #8b0000; color: white; font-weight: 600; border-radius: 10px 10px 0 0 !important; }
         .table { margin-bottom: 0; }
         .badge { padding: 0.5em 0.8em; }
+        .btn-success { background-color: #8b0000 !important; border-color: #8b0000 !important; }
+        .btn-success:hover { background-color: #6b0000 !important; border-color: #6b0000 !important; }
+        .form-control:focus { border-color: #8b0000; box-shadow: 0 0 0 0.25rem rgba(139,0,0,0.18); }
     </style>
 </head>
 <body>

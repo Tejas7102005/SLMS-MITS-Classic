@@ -1,8 +1,8 @@
 <!-- Navbar Component -->
 <!-- Usage: include 'includes/navbar.php'; -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #8b0000;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">SLMS - <?php echo ucfirst($_SESSION['role']); ?></a>
+        <a class="navbar-brand fw-bold" href="#">SLMS - <?php echo ucfirst($_SESSION['role']); ?></a>
         <div class="d-flex align-items-center">
             <span class="text-white me-3">
                 <i class="bi bi-person-circle"></i> 

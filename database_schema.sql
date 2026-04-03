@@ -7,7 +7,7 @@ USE leave_management_db;
 DROP TABLE IF EXISTS leaves;
 DROP TABLE IF EXISTS users;
 
--- 1. Users Table (Updated with all MERN stack fields)
+-- 1. Users Table
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 2. Leaves Table (Updated with date fields and faculty comment)
+-- 2. Leaves Table
 CREATE TABLE leaves (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
